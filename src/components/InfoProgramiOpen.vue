@@ -1,25 +1,22 @@
 <template>
   <div
     class="wrapper fixed-bottom transparent-black"
-    @click="this.$emit('action')"
+    @click="useToggle().toggleProgrami()"
   >
     <div class="popup px-4 fixed-bottom bg-white pb-3">
       <div class="pt-4">
         <p class="title m-0 p-0 fs-1">{{ data.title }}</p>
       </div>
       <div class="mt-4 free-days fs-5">
-        <p><slot></slot> {{ data.list }}</p>
-        <p v-for="section in data.sections">
-          {{ section }}
-        </p>
+        <p>{{ data.list }}</p>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import { useToggle } from '../stores/toggle';
 const props = defineProps(["data"]);
-const emit = defineEmits(["action"]);
 </script>
 
 <style scoped>

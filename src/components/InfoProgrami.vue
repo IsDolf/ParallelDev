@@ -1,35 +1,21 @@
 <template>
   <div
     class="info rounded-4 rounded-start py-2 mt-4"
-    @click="this.$emit('action')"
+    @click="useToggle().toggleProgrami()"
   >
     <p class="mx-3 my-1 title">
       <!-- O nama -->
       {{ data.title }}
     </p>
     <p class="mx-3 my-1 text">
-      <slot></slot>
-      <!-- Znanje stečeno na
-      fakultetu omogućilo nam je da se bavimo instrukcijama iz raznih područja.
-      Iskustvo i znanje koje smo tim putem stekli potaknulo nas je da proširimo
-      svoju djelatnost te olakšamo učenje većem broju učenika i studenata. Tako
-      smo došli na ideju da otvorimo vlastitu školu za poduke. Odlučili smo
-      ozbiljno pristupiti ideji te uložiti puno truda i vremena kako bi
-      realizirali naš projekt. S vremenom, kao učenici i studenti, upoznali smo
-      se s obrazovnim sustavom i njegovim nedostatcima pa ovim putem želimo
-      ponuditi pomoć svima onima koji nailaze na razne prepreke, na kakve smo i
-      sami nailazili prilikom obrazovnog procesa. Baš zato što smo mladi i
-      osvješteni vjerujemo da možemo prenositi znanje na jednostavan i zanimljiv
-      način. -->
-      {{ data.text }}
       {{ data.list }}
     </p>
   </div>
 </template>
 
 <script setup>
+import { useToggle } from "../stores/toggle";
 const props = defineProps(["data"]);
-const emit = defineEmits(["action"]);
 </script>
 
 <style scoped>

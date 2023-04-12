@@ -1,27 +1,19 @@
 <template>
   <main>
-    <Info :data="useDataStore().onama" @action="useToggle().toggleOnama()">
+    <InfoONama :data="useDataStore().onama">
       <slot> Mi smo <span class="parallelFont">Parallel</span>. </slot>
-    </Info>
+    </InfoONama>
 
-    <Cards />
+    <Cards />asdasdg
 
-    <Info
-      :data="useDataStore().programi"
-      @action="useToggle().toggleProgrami()"
-    />
+    <InfoProgrami :data="useDataStore().programi" />
 
-    <InfoOpen
-      v-if="useToggle().onamaOpen"
-      :data="useDataStore().onama"
-      @action="useToggle().toggleOnama()"
-    >
+    <InfoONamaOpen v-if="useToggle().onamaOpen" :data="useDataStore().onama">
       <slot> Mi smo <span class="parallelFont">Parallel</span>. </slot>
-    </InfoOpen>
-    <InfoOpen
+    </InfoONamaOpen>
+    <InfoProgramiOpen
       v-if="useToggle().programiOpen"
       :data="useDataStore().programi"
-      @action="useToggle().toggleProgrami()"
     />
     <FooterComponent />
   </main>
@@ -30,8 +22,10 @@
 <script setup>
 import { useDataStore } from "../stores/dataStore";
 import { useToggle } from "../stores/toggle";
-import InfoOpen from "../components/InfoOpen.vue";
-import Info from "../components/Info.vue";
+import InfoONamaOpen from "../components/InfoONamaOpen.vue";
+import InfoProgramiOpen from "../components/InfoProgramiOpen.vue";
+import InfoONama from "../components/InfoONama.vue";
+import InfoProgrami from "../components/InfoProgrami.vue";
 import Cards from "../components/Cards.vue";
 import FooterComponent from "../components/FooterComponent.vue";
 </script>
