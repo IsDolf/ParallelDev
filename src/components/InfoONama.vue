@@ -48,7 +48,7 @@ const props = defineProps(["data"]);
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
-  overflow: auto;
+  overflow: hidden;
   height: auto;
   border-radius: 5px;
   text-overflow: ellipsis;
