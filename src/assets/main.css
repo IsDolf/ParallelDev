@@ -1,5 +1,4 @@
 body {
-  min-height: 100vh;
   max-height: 100vh;
   color: var(--color-text);
   background-image: linear-gradient(

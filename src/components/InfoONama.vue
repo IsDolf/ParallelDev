@@ -49,12 +49,11 @@ const props = defineProps(["data"]);
   font-weight: 500;
   font-size: 17px;
   overflow: hidden;
-  height: 100%;
   border-radius: 5px;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2; /* number of lines to show */
   line-clamp: 2;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
 }
 </style>
