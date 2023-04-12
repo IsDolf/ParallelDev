@@ -55,6 +55,6 @@ const props = defineProps(["data"]);
   display: -webkit-box;
   -webkit-line-clamp: 2; /* number of lines to show */
   line-clamp: 2;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
 }
 </style>
