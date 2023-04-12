@@ -4,7 +4,7 @@
       <slot> Mi smo <span class="parallelFont">Parallel</span>. </slot>
     </InfoONama>
 
-    <Cards />asdasdg
+    <Cards />
 
     <InfoProgrami :data="useDataStore().programi" />
 
