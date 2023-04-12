@@ -22,7 +22,7 @@ const props = defineProps(["data"]);
 <style scoped>
 .info {
   display: inline-block;
-  width: 25vw;
+  width: 95vw;
   background: rgb(5, 218, 255);
   color: rgb(0, 7, 101);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
