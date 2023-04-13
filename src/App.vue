@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <div class="asd">
+
   <nav class="navbar navbar-expand-lg box-shadow">
     <div class="container-fluid d-flex justify-content-center">
       <a class="navbar-brand fw-bold fst-italic" href="#"
@@ -12,7 +12,7 @@ import { RouterLink, RouterView } from "vue-router";
     </div>
   </nav>
   <RouterView />
-</div>
+
 </template>
 
 <style scoped>
@@ -24,8 +24,4 @@ nav {
   background-color: rgba(64, 255, 0, 0.132);
 }
 
-.asd {
-  height: 100vh;
-  max-height: 100vh;
-}
 </style>
