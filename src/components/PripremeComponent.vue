@@ -63,7 +63,7 @@
           class="fs-8 text-decoration-none fw-bold text-dark"
           href="tel:+385992053344"
         >
-          Iznos: {{ iznos }} EUR ({{
+          {{ iznos }} EUR ({{
             (Math.round(iznos * 7.5345 * 100) / 100).toFixed(2)
           }}
           kn)
