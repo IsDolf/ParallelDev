@@ -30,6 +30,7 @@ const props = defineProps(["data"]);
   overflow: scroll;
   height: 85vh;
   z-index: 1032;
-  background-color: rgba(64, 255, 0, 0.132);
+  background: rgb(0, 255, 211);
+  background: linear-gradient(rgb(0, 213, 255) 3%, rgb(52, 255, 184) 81%);
 }
 </style>
