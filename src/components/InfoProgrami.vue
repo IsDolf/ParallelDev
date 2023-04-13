@@ -7,9 +7,11 @@
       <!-- O nama -->
       {{ data.title }}
     </p>
-    <p class="mx-3 my-1 text">
-      {{ data.list }}
-    </p>
+    <div class="text-wrapper">
+      <p class="mx-3 my-1 text">
+        {{ data.list }}
+      </p>
+    </div>
   </div>
 </template>
 
@@ -19,6 +21,15 @@ const props = defineProps(["data"]);
 </script>
 
 <style scoped>
+.text-wrapper {
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-inline-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
 .info {
   display: inline-block;
   width: 95vw;
@@ -48,12 +59,5 @@ const props = defineProps(["data"]);
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
-  position: relative;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2; /* number of lines to show */
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
 }
 </style>

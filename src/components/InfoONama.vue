@@ -7,7 +7,7 @@
       <!-- O nama -->
       {{ data.title }}
     </p>
-    <div class="asd">
+    <div class="text-wrapper">
     <p class="mx-3 my-1 text">
       <slot></slot>
       {{ data.text }}
@@ -22,7 +22,7 @@ const props = defineProps(["data"]);
 </script>
 
 <style scoped>
-.asd {
+.text-wrapper {
   position: relative;
   overflow: hidden;
   text-overflow: ellipsis;
