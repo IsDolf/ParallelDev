@@ -13,7 +13,7 @@ const app = createApp(App)
 
 app.use(createPinia())
 app.use(Toast, {
-    position: POSITION.BOTTOM_RIGHT
+    position: POSITION.TOP_RIGHT
 })
 app.use(router)
 

@@ -88,6 +88,33 @@
 </template>
 
 <script>
+import { useToast } from "vue-toastification";
+const toast = useToast();
+
+setTimeout(() => {
+  toast(
+    "Upisi na pripreme za državnu maturu traju od 1. veljače 2023. do 15. ožujka 2023. Upiši se i rezerviraj svoje mjesto.",
+    {
+      timeout: 15000,
+    }
+  );
+}, 100);
+
+setTimeout(() => {
+  toast(
+    "Ukoliko upišete pripreme iz dva predmeta odobravamo 10% popusta. Ukoliko upišete pripreme iz tri ili više predmeta odobravamo 20% popusta.",
+    {
+      timeout: 15000,
+    }
+  );
+}, 15000);
+
+setTimeout(() => {
+  toast("Moguće je obročno plaćanje. ", {
+    timeout: 15000,
+  });
+}, 30000);
+
 export default {
   data() {
     return {
