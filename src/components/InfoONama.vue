@@ -7,9 +7,9 @@
       <!-- O nama -->
       {{ data.title }}
     </p>
-    <p class="mx-3 my-1 text">
+    <p class="mx-3 my-1">
       <slot></slot>
-
+      {{ data.text }}
     </p>
   </div>
 </template>
