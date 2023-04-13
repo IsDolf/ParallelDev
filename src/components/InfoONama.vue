@@ -21,7 +21,6 @@ const props = defineProps(["data"]);
 
 <style scoped>
 .info {
-  position: relative;
   display: inline-block;
   width: 95vw;
   background: rgb(5, 218, 255);
@@ -29,6 +28,8 @@ const props = defineProps(["data"]);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border: 1px solid rgba(156, 252, 248, 1) 11.2%, rgba(110, 123, 251, 1) 91.1%;
+  position: relative;
+  overflow: hidden;
 }
 .info:hover {
   color: rgb(0, 10, 148);
@@ -46,12 +47,9 @@ const props = defineProps(["data"]);
 }
 .text {
   width: 90vw;
-  max-height: 20px;
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
-  position: relative;
-  overflow: hidden;
   border-radius: 5px;
   text-overflow: ellipsis;
   display: -webkit-box;
