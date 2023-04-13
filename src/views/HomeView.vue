@@ -32,11 +32,11 @@ import FooterComponent from "../components/FooterComponent.vue";
 
 <style scoped>
 .slide-fade-enter-active {
-  transition: all 3s;
+  transition: all 0.6s;
 }
 
 .slide-fade-leave-active {
-  transition: all 3s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
 }
 
 .slide-fade-enter-from,
