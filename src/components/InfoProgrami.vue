@@ -7,11 +7,6 @@
       <!-- O nama -->
       {{ data.title }} (38)
     </p>
-    <div class="text-wrapper mx-4">
-      <ul>
-        <li v-for="item in data.list.slice(0, 3)">{{ item }}</li>
-      </ul>
-    </div>
   </div>
 </template>
 

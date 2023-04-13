@@ -6,10 +6,11 @@
 
     <Cards />
     <InfoProgrami :data="useDataStore().programi" />
-
-    <InfoONamaOpen v-if="useToggle().onamaOpen" :data="useDataStore().onama">
-      <slot> Mi smo <span class="parallelFont">Parallel</span>. </slot>
-    </InfoONamaOpen>
+    <Transition name="slide-fade">
+      <InfoONamaOpen v-if="useToggle().onamaOpen" :data="useDataStore().onama">
+        <slot> Mi smo <span class="parallelFont">Parallel</span>. </slot>
+      </InfoONamaOpen>
+    </Transition>
     <InfoProgramiOpen
       v-if="useToggle().programiOpen"
       :data="useDataStore().programi"
@@ -28,3 +29,19 @@ import InfoProgrami from "../components/InfoProgrami.vue";
 import Cards from "../components/Cards.vue";
 import FooterComponent from "../components/FooterComponent.vue";
 </script>
+
+<style scoped>
+.slide-fade-enter-active {
+  transition: all 0.5s;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateY(100vh);
+  opacity: 0;
+}
+</style>
