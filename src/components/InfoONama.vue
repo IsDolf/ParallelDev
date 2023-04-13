@@ -24,7 +24,6 @@ const props = defineProps(["data"]);
   position: relative;
   display: inline-block;
   width: 95vw;
-  max-height: 150px;
   background: rgb(5, 218, 255);
   color: rgb(0, 7, 101);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
@@ -47,7 +46,7 @@ const props = defineProps(["data"]);
 }
 .text {
   width: 90vw;
-  height: auto;
+  max-height: 20px;
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
