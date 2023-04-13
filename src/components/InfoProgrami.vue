@@ -5,12 +5,12 @@
   >
     <p class="mx-3 my-1 title">
       <!-- O nama -->
-      {{ data.title }}
+      {{ data.title }} (38)
     </p>
-    <div class="text-wrapper">
-      <p class="mx-3 my-1 text">
-        {{ data.list }}
-      </p>
+    <div class="text-wrapper mx-4">
+      <ul>
+        <li v-for="item in data.list.slice(0, 3)">{{ item }}</li>
+      </ul>
     </div>
   </div>
 </template>
@@ -33,6 +33,7 @@ const props = defineProps(["data"]);
 .info {
   display: inline-block;
   width: 95vw;
+  max-height: 200px;
   background: rgb(5, 218, 255);
   color: rgb(0, 7, 101);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
@@ -52,6 +53,7 @@ const props = defineProps(["data"]);
   font-weight: 600;
   font-size: 18px;
   font-family: Chalkduster;
+  white-space: nowrap;
 }
 .text {
   width: 90vw;
