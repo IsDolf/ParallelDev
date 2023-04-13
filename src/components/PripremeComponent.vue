@@ -69,6 +69,7 @@
           kn)
         </a>
         <a
+          v-if="iznos != 0"
           class="fs-8 text-decoration-none fw-bold text-dark"
           href="tel:+385992053344"
         >
