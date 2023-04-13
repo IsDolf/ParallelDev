@@ -4,7 +4,7 @@
       <div class="row mt-5">
         <ul>
           <li>
-            <a class="facebook" href="#">
+            <a class="facebook" href="https://www.facebook.com/poduke.parallel">
               <span></span>
               <span></span>
               <span></span>
@@ -13,7 +13,10 @@
             </a>
           </li>
           <li>
-            <a class="instagram" href="#">
+            <a
+              class="instagram"
+              href="https://www.instagram.com/poduke.parallel/"
+            >
               <span></span>
               <span></span>
               <span></span>
