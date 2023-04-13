@@ -5,18 +5,24 @@
     </InfoONama>
 
     <Cards />
+
     <InfoProgrami :data="useDataStore().programi" />
+
+    <InfoPitanja />
+
     <Transition name="slide-fade">
       <InfoONamaOpen v-if="useToggle().onamaOpen" :data="useDataStore().onama">
         <slot> Mi smo <span class="parallelFont">Parallel</span>. </slot>
       </InfoONamaOpen>
     </Transition>
+
     <Transition name="slide-fade">
       <InfoProgramiOpen
         v-if="useToggle().programiOpen"
         :data="useDataStore().programi"
       />
     </Transition>
+
     <FooterComponent />
   </main>
 </template>
@@ -26,8 +32,10 @@ import { useDataStore } from "../stores/dataStore";
 import { useToggle } from "../stores/toggle";
 import InfoONamaOpen from "../components/InfoONamaOpen.vue";
 import InfoProgramiOpen from "../components/InfoProgramiOpen.vue";
+import InfoPitanjaOpen from "../components/InfoPitanjaOpen.vue";
 import InfoONama from "../components/InfoONama.vue";
 import InfoProgrami from "../components/InfoProgrami.vue";
+import InfoPitanja from "../components/InfoPitanja.vue";
 import Cards from "../components/Cards.vue";
 import FooterComponent from "../components/FooterComponent.vue";
 </script>
