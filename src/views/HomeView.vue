@@ -11,10 +11,12 @@
         <slot> Mi smo <span class="parallelFont">Parallel</span>. </slot>
       </InfoONamaOpen>
     </Transition>
-    <InfoProgramiOpen
-      v-if="useToggle().programiOpen"
-      :data="useDataStore().programi"
-    />
+    <Transition name="slide-fade">
+      <InfoProgramiOpen
+        v-if="useToggle().programiOpen"
+        :data="useDataStore().programi"
+      />
+    </Transition>
     <FooterComponent />
   </main>
 </template>

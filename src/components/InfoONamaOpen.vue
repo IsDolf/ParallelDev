@@ -28,14 +28,6 @@ const props = defineProps(["data"]);
   font-family: Chalkduster;
 }
 
-.transparent-black {
-  background: rgb(25, 32, 34);
-  background: linear-gradient(
-    180deg,
-    rgba(34, 25, 25, 0.5284488795518207) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
 
 .popup {
   border-radius: 12px 12px 0 0;
