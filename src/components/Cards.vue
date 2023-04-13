@@ -171,8 +171,8 @@ window.setInterval(() => {
 
 .card-title {
   font-style: normal;
-  font-size: 28px;
-  line-height: 30px;
+  font-size: 24px;
+  line-height: 24px;
   letter-spacing: -0.2px;
   color: rgb(9, 53, 0);
   font-family: Chalkduster;
