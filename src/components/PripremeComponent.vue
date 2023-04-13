@@ -245,7 +245,6 @@ export default {
   font-style: italic;
   cursor: pointer;
   margin-inline: 4px;
-  background-color: rgba(0, 255, 110, 0.247);
 }
 
 .list-group-item {
