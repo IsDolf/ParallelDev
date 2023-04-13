@@ -25,6 +25,6 @@ nav {
 }
 
 .asd {
-  height: auto;
+  height: 200vh;
 }
 </style>
