@@ -105,7 +105,7 @@ window.setInterval(() => {
     currentPomoc.value = 0;
   } else currentPomoc.value++;
   pomoc.value = array[currentPomoc.value];
-}, 2000);
+}, 1200);
 </script>
 
 <style scoped>
