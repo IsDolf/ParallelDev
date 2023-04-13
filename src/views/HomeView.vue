@@ -41,7 +41,7 @@ import FooterComponent from "../components/FooterComponent.vue";
 
 .slide-fade-enter-from,
 .slide-fade-leave-to {
-  transform: translateY(50vh);
+  transform: translateY(100%);
   opacity: 0;
 }
 </style>
