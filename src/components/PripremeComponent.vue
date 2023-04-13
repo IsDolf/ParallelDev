@@ -12,7 +12,7 @@
       class="list-group list-group-flush p-3 rounded-5 shadow m-1 mx-1 my-5"
     >
       <li
-        class="list-group-item h4 d-flex justify-content-between"
+        class="list-group-item h4 d-flex justify-content-between parallelFont"
         v-for="program in programiPriprema"
         :class="{ activated: program.isActive }"
         @click="editTest(program)"
@@ -38,7 +38,7 @@
         Ubrzani programi priprema
       </div>
       <li
-        class="list-group-item h4 d-flex justify-content-between"
+        class="list-group-item h4 d-flex justify-content-between parallelFont"
         v-for="program in ubrzaniProgramiPriprema"
         :class="{ activated: program.isActive }"
         @click="editTest(program)"
