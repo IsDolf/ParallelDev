@@ -1,6 +1,6 @@
 <template>
   <div
-    class="popup px-4 fixed-bottom bg-white pb-3"
+    class="popup px-4 fixed-bottom bg-info pb-3"
     @click="useToggle().toggleOnama()"
   >
     <div class="pt-4">
