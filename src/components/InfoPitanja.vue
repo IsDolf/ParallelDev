@@ -7,7 +7,7 @@
       <!-- O nama -->
       Kontakt
     </p>
-    <div class="bg-info rounded-4 mx-1">
+    <div class="rounded-4 mx-1">
       <div
         class="d-flex justify-content-around d-inline-block"
         v-if="useToggle().pitanjaOpen"
