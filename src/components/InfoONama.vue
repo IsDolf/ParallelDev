@@ -7,7 +7,7 @@
       <!-- O nama -->
       {{ data.title }}
     </p>
-    <p class="mx-3 my-1">
+    <p class="mx-3 my-1 text">
       <slot></slot>
       {{ data.text }}
     </p>
@@ -21,6 +21,7 @@ const props = defineProps(["data"]);
 
 <style scoped>
 .info {
+  position: relative;
   display: inline-block;
   width: 95vw;
   background: rgb(5, 218, 255);
