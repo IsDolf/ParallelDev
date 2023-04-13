@@ -40,7 +40,7 @@ const props = defineProps(["data"]);
 }
 
 .wrapper {
-  height: 200vh;
+  height: auto;
   background-color: transparent;
   z-index: 1032;
 }
