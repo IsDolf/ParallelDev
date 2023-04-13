@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="popup px-4 fixed-bottom bg-info pb-3"
-    @click="useToggle().toggleOnama()"
-  >
+  <div class="popup px-4 fixed-bottom pb-3" @click="useToggle().toggleOnama()">
     <div class="pt-4">
       <p class="title m-0 p-0 fs-1">{{ data.title }}</p>
     </div>
@@ -28,11 +25,11 @@ const props = defineProps(["data"]);
   font-family: Chalkduster;
 }
 
-
 .popup {
   border-radius: 12px 12px 0 0;
   overflow: scroll;
   height: 85vh;
   z-index: 1032;
+  background-color: rgba(64, 255, 0, 0.132);
 }
 </style>
