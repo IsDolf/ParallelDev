@@ -4,15 +4,15 @@ import { RouterLink, RouterView } from "vue-router";
 
 <template>
   <div class="asd">
-  <nav class="navbar navbar-expand-lg box-shadow">
-    <div class="container-fluid d-flex justify-content-center">
-      <a class="navbar-brand fw-bold fst-italic" href="#"
-        ><h1>Parallel Poduke</h1></a
-      >
-    </div>
-  </nav>
-  <RouterView />
-</div>
+    <nav class="navbar navbar-expand-lg box-shadow">
+      <div class="container-fluid d-flex justify-content-center">
+        <a class="navbar-brand fw-bold fst-italic" href="#"
+          ><h1>Parallel Poduke</h1></a
+        >
+      </div>
+    </nav>
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>
@@ -25,7 +25,6 @@ nav {
 }
 
 .asd {
-  height: 100vh;
-  max-height: 100vh;
+  height: auto;
 }
 </style>
