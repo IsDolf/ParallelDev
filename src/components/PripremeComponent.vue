@@ -278,5 +278,6 @@ export default {
   border: 1px solid rgba(156, 252, 248, 1) 11.2%, rgba(110, 123, 251, 1) 91.1%;
   z-index: 1034;
   height: 200%;
+  width: auto;
 }
 </style>
