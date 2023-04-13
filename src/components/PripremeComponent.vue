@@ -33,7 +33,7 @@
         >
       </li>
       <div
-        class="card-header d-flex justify-content-center align-items-center display-5 my-2 rounded-4 parallelFont fs-1 py-4 bg-light"
+        class="card-header d-flex justify-content-center align-items-center text-center display-5 my-2 rounded-4 parallelFont fs-1 py-4 bg-light"
       >
         Ubrzani programi priprema
       </div>
