@@ -1,6 +1,8 @@
 <template>
-  <p class="display-1 text-center fw-bold fst-italic parallelFont my-3">Klepac je pussy</p>
-  <div class="bg-white rounded-5 mx-5 my-5 pb-2">
+  <p class="display-1 text-center fw-bold fst-italic parallelFont my-3">
+    Klepac je pussy
+  </p>
+  <div class="bg-white rounded-5 mx-2 my-5 pb-2">
     <ul
       class="list-group list-group-flush p-3 rounded-5 shadow m-1 bg-white mx-1 my-5"
     >
