@@ -4,7 +4,7 @@
   </p>
   <div class="bg-white rounded-5 mx-2 my-5 pb-2">
     <div
-        class="card-header d-flex justify-content-center align-items-center text-center display-5 my-2 rounded-4 parallelFont fs-1 py-4 bg-light"
+        class="card-header d-flex justify-content-center align-items-center text-center display-5 my-2 rounded-4 parallelFont fs-1 py-1 bg-light"
       >
         Programi priprema
       </div>
