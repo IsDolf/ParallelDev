@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white rounded-5 mx-1 my-1 my-5 pripreme-wrapper">
     <div
-      class="card-header d-flex justify-content-between mx-4 display-5 my-2 py-3 rounded-4 parallelFont fs-1"
+      class="d-flex justify-content-between mx-4 display-5 my-2 py-3 rounded-4 parallelFont fs-1"
     >
       <p></p>
       Programi priprema
@@ -34,27 +34,23 @@
         >
       </li>
       <div
-        class="h3 d-flex justify-content-evenly text-center fw-bold price my-2 mx-4 py-3 rounded-3"
+        class="h3 d-flex justify-content-evenly text-center fw-bold shadow-lg my-2 mx-4 py-3 rounded-3" :class="iznos == 0 ? 'price' : 'activated', 'border border-success'" 
       >
-        <a
-          class="fs-8 text-decoration-none fw-bold text-dark"
-          href="tel:+385992053344"
-        >
-          {{ iznos }} EUR ({{
-            (Math.round(iznos * 7.5345 * 100) / 100).toFixed(2)
-          }}
-          kn)
-        </a>
-        <a
-          v-if="iznos != 0"
-          class="fs-8 text-decoration-none fw-bold text-dark"
-          href="tel:+385992053344"
-        >
-          <i class="fa fa-phone" style="font-size: 30px"></i
-        ></a>
+        {{ iznos }} EUR ({{
+          (Math.round(iznos * 7.5345 * 100) / 100).toFixed(2)
+        }}
+        kn)
+      </div>
+      <div class="row d-flex justify-content-evenly">
+        <button class="d-flex justify-content-center btn col-5 d-inline-block" :class="iznos == 0 ? 'disabled' : ''" >
+          <i class="fa fa-envelope text-center" style="font-size: 80px"></i>
+        </button>
+        <button class="d-flex justify-content-center btn col-5 d-inline-block" :class="iznos == 0 ? 'disabled' : ''">
+          <i class="fa fa-phone text-center" style="font-size: 80px"></i>
+        </button>
       </div>
       <div
-        class="card-header d-flex justify-content-center align-items-center text-center display-5 my-2 rounded-4 parallelFont fs-1 py-4 bg-light"
+        class="card-header d-flex justify-content-center align-items-center text-center display-5 my-2 shadow rounded-4 parallelFont fs-1 py-4"
       >
         Ubrzani programi priprema
       </div>
@@ -212,6 +208,13 @@ export default {
 </script>
 
 <style scoped>
+.card-header {
+  background-image: linear-gradient(
+    90deg,
+    rgba(149, 255, 0, 0.223) 0.2%,
+    rgba(53, 252, 79, 0.167) 99.1%
+  );
+}
 .fa-close {
   cursor: pointer;
   font-size: 60px;
@@ -233,7 +236,8 @@ export default {
 }
 
 .price {
-  background-color: rgba(154, 247, 255, 0.95);
+  background-color: rgba(255, 64, 0, 0.386);
+  border: 1px solid rgba(255, 64, 0, 0.386);
 }
 
 .list-group-item:hover {
@@ -241,7 +245,7 @@ export default {
   font-style: italic;
   cursor: pointer;
   margin-inline: 4px;
-  background-color: rgba(0, 234, 255, 0.31);
+  background-color: rgba(0, 255, 110, 0.247);
 }
 
 .list-group-item {
@@ -249,7 +253,7 @@ export default {
   font-style: italic;
   cursor: pointer;
   margin-inline: 2px;
-  background-color: rgba(0, 234, 255, 0.21);
+  background-color: rgba(0, 234, 255, 0.097);
 }
 
 .boxed {
@@ -258,11 +262,11 @@ export default {
 }
 
 .activated {
-  background-color: rgb(181, 244, 181);
+  background-color: rgba(0, 255, 0, 0.504);
 }
 
 .activated:hover {
-  background-color: rgb(217, 255, 217);
+  background-color: rgba(0, 255, 0, 0.354);
 }
 
 .hoverbutton:hover {
