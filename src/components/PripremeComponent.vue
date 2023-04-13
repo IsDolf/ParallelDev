@@ -82,9 +82,9 @@
         ></a>
       </div>
     </ul>
-    <p class="h6 mx-5 text-center">
+    <!-- <p class="h6 mx-5 text-center">
       Fiksni tečaj konverzije 1 EUR = 7,53450 kn.
-    </p>
+    </p> -->
     <!-- <p class="fs-7 mx-5 text-center">
       Izvedbeni program priprema za državnu maturu je osmišljen u skladu sa
       službenim ispitnim katalozima koje izdaje Nacionalni centar za vanjsko
@@ -277,6 +277,6 @@ export default {
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border: 1px solid rgba(156, 252, 248, 1) 11.2%, rgba(110, 123, 251, 1) 91.1%;
   z-index: 1034;
-  height: 150%;
+  height: 200%;
 }
 </style>
