@@ -12,7 +12,7 @@
         <div class="d-flex justify-content-around d-inline-block">
           <a
             class="fs-8 text-decoration-none fw-bold text-dark"
-            href="mailto: rudolf.rukavina@hexis.hr"
+            href="mailto: rudolf.rukavina@hexis.hr?subject=Subject%20Text&body=Body%20Text"
           >
             <i
               class="fa fa-envelope mx-auto px-5 my-3"
@@ -31,7 +31,7 @@
           <p>
             <a
               class="fs-8 text-decoration-none fw-bold text-dark"
-              href="mailto: rudolf.rukavina@hexis.hr"
+              href="mailto: rudolf.rukavina@hexis.hr?subject=Subject%20Text&body=Body%20Text"
               >rudolf.rukavina@hexis.hr</a
             >
           </p>
@@ -98,7 +98,7 @@ const props = defineProps(["data"]);
   width: 90vw;
   font-weight: 600;
   font-size: 18px;
-  font-family:   var(--font);
+  font-family: var(--font);
   white-space: nowrap;
 }
 .text {
