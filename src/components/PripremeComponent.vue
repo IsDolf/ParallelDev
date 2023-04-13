@@ -4,10 +4,10 @@
   </p>
   <div class="bg-white rounded-5 mx-2 my-5 pb-2">
     <div
-      class="card-header d-flex justify-content-center display-5 m-2 rounded-4 parallelFont fs-1 pt-5"
-    >
-      Programi priprema
-    </div>
+        class="card-header d-flex justify-content-center align-items-center text-center display-5 my-2 rounded-4 parallelFont fs-1 py-4 bg-light"
+      >
+        Programi priprema
+      </div>
     <ul class="list-group list-group-flush p-3 rounded-5 shadow m-1 mx-1 my-5">
       <li
         class="list-group-item h4 d-flex justify-content-between parallelFont"

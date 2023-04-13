@@ -8,44 +8,47 @@
       Kontakt
     </p>
     <div class="bg-info rounded-4 mx-1">
-    <div
-      class="d-flex justify-content-around d-inline-block"
-      v-if="useToggle().pitanjaOpen"
-    >
-      <a
-        class="fs-8 text-decoration-none fw-bold text-dark"
-        href="mailto: rudolf.rukavina@hexis.hr"
+      <div
+        class="d-flex justify-content-around d-inline-block"
+        v-if="useToggle().pitanjaOpen"
       >
-        <i class="fa fa-envelope mx-auto px-5 my-3" style="font-size: 46px"></i
-      ></a>
-
-      <a
-        class="fs-8 text-decoration-none fw-bold text-dark"
-        href="tel:+385992053344"
-      >
-        <i class="fa fa-phone mx-auto px-5 my-3" style="font-size: 46px"></i
-      ></a>
-    </div>
-    <div
-      class="d-flex justify-content-around d-inline-block"
-      v-if="useToggle().pitanjaOpen"
-    >
-      <p>
         <a
           class="fs-8 text-decoration-none fw-bold text-dark"
           href="mailto: rudolf.rukavina@hexis.hr"
-          >rudolf.rukavina@hexis.hr</a
         >
-      </p>
-      <p>
+          <i
+            class="fa fa-envelope mx-auto px-5 my-3"
+            style="font-size: 46px"
+          ></i
+        ></a>
+
         <a
           class="fs-8 text-decoration-none fw-bold text-dark"
           href="tel:+385992053344"
-          >+385992053344</a
         >
-      </p>
+          <i class="fa fa-phone mx-auto px-5 my-3" style="font-size: 46px"></i
+        ></a>
+      </div>
+      <div
+        class="d-flex justify-content-around d-inline-block"
+        v-if="useToggle().pitanjaOpen"
+      >
+        <p>
+          <a
+            class="fs-8 text-decoration-none fw-bold text-dark"
+            href="mailto: rudolf.rukavina@hexis.hr"
+            >rudolf.rukavina@hexis.hr</a
+          >
+        </p>
+        <p>
+          <a
+            class="fs-8 text-decoration-none fw-bold text-dark"
+            href="tel:+385992053344"
+            >+385992053344</a
+          >
+        </p>
+      </div>
     </div>
-</div>
   </div>
 </template>
 
