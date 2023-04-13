@@ -9,7 +9,7 @@
     </p>
     <p class="mx-3 my-1 text">
       <slot></slot>
-      {{ data.text }}
+
     </p>
   </div>
 </template>
