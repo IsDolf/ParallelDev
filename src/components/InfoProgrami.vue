@@ -47,7 +47,7 @@ const props = defineProps(["data"]);
   width: 90vw;
   font-weight: 600;
   font-size: 18px;
-  font-family: Chalkduster;
+  font-family:   var(--font);
   white-space: nowrap;
 }
 .text {

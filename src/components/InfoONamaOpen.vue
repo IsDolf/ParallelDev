@@ -23,7 +23,7 @@ const props = defineProps(["data"]);
 .title {
   font-weight: 600;
   font-size: 18px;
-  font-family: Chalkduster;
+  font-family:   var(--font);
 }
 
 .popup {
