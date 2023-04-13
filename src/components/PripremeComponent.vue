@@ -1,8 +1,12 @@
 <template>
-  <div
-    class="popup px-5 fixed-bottom bg-info pb-3"
-    @click="useToggle().togglePripreme()"
-  >
+  <div class="popup px-5 fixed-bottom bg-info pb-3">
+    <div class="d-flex justify-content-end my-3 mx-3">
+      <i
+        @click="togglePripreme()"
+        class="fa fa-close d-inline-block"
+        aria-hidden="true"
+      ></i>
+    </div>
     <div class="bg-white rounded-5 mx-2 my-5 pb-2">
       <div
         class="card-header d-flex justify-content-center display-5 m-2 rounded-4 parallelFont fs-1 pt-5"
@@ -93,6 +97,7 @@
 </template>
 
 <script>
+import { useToggle } from "../stores/toggle";
 // import { useToast } from "vue-toastification";
 // const toast = useToast();
 
@@ -202,6 +207,9 @@ export default {
         this.iznos = this.iznos + program.cijena;
       }
     },
+    togglePripreme() {
+      useToggle().togglePripreme();
+    },
   },
   computed: {},
   updated() {},
@@ -209,6 +217,10 @@ export default {
 </script>
 
 <style scoped>
+.fa-close {
+  cursor: pointer;
+  font-size: 40px;
+}
 .popup {
   border-radius: 12px 12px 0 0;
   overflow: scroll;
