@@ -32,7 +32,7 @@ const props = defineProps(["data"]);
   position: relative;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
+  display: -webkit-inline-box;
   -webkit-line-clamp: 2; /* number of lines to show */
   line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -57,5 +57,6 @@ const props = defineProps(["data"]);
   font-weight: 500;
   font-size: 17px;
   border-radius: 5px;
+  padding-bottom: 26px;
 }
 </style>
