@@ -22,6 +22,9 @@
         :data="useDataStore().programi"
       />
     </Transition>
+    <Transition name="slide-fade">
+      <PripremeComponent v-if="useToggle().pripremeOpen" />
+    </Transition>
 
     <FooterComponent />
   </main>
@@ -32,7 +35,7 @@ import { useDataStore } from "../stores/dataStore";
 import { useToggle } from "../stores/toggle";
 import InfoONamaOpen from "../components/InfoONamaOpen.vue";
 import InfoProgramiOpen from "../components/InfoProgramiOpen.vue";
-import InfoPitanjaOpen from "../components/InfoPitanjaOpen.vue";
+import PripremeComponent from "../components/PripremeComponent.vue";
 import InfoONama from "../components/InfoONama.vue";
 import InfoProgrami from "../components/InfoProgrami.vue";
 import InfoPitanja from "../components/InfoPitanja.vue";

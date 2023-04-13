@@ -5,7 +5,7 @@
       <div class="card-wrapper">
         <div
           class="card box-shadow d-flex justify-content-center text-center"
-          @click="router.push('/pripreme')"
+          @click="useToggle().togglePripreme()"
         >
           <div class="row g-0">
             <div
@@ -96,6 +96,7 @@
 <script setup>
 import { ref } from "vue";
 import router from "../router";
+import { useToggle } from "../stores/toggle";
 let currentPomoc = ref(0);
 let pomoc = ref("zadaća");
 let array = ["zadaća", "seminara", "projekata", "lektira"];

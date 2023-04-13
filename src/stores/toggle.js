@@ -5,6 +5,7 @@ export const useToggle = defineStore("toggle", {
     onamaOpen: false,
     programiOpen: false,
     pitanjaOpen: false,
+    pripremeOpen: false,
     toggleOnama() {
       this.onamaOpen = !this.onamaOpen;
     },
@@ -13,6 +14,9 @@ export const useToggle = defineStore("toggle", {
     },
     togglePitanja() {
       this.pitanjaOpen = !this.pitanjaOpen;
+    },
+    togglePripreme() {
+      this.pripremeOpen = !this.pripremeOpen;
     },
   }),
   actions: {},

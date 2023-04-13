@@ -2,26 +2,14 @@
   <div
     class="popup px-5 fixed-bottom bg-info pb-3"
     @click="useToggle().togglePitanja()"
-  >              <div class="d-flex justify-content-center">
-                <i
-                  class="fa fa-envelope mx-auto px-5 my-3"
-                  style="font-size: 46px"
-                ></i>
-                <i
-                  class="fa fa-phone mx-auto px-5 my-3"
-                  style="font-size: 46px"
-                ></i>
-              </div>
-  </div>
+  ></div>
 </template>
 
 <script setup>
 import { useToggle } from "../stores/toggle";
-const props = defineProps(["data"]);
 </script>
 
 <style scoped>
-
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
 
 .card-wrapper-solo {

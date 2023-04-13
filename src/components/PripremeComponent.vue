@@ -1,120 +1,124 @@
 <template>
-  <p class="display-1 text-center fw-bold fst-italic parallelFont my-3">
-    Klepac je pussy
-  </p>
-  <div class="bg-white rounded-5 mx-2 my-5 pb-2">
-    <div
-      class="card-header d-flex justify-content-center display-5 m-2 rounded-4 parallelFont fs-1 pt-5"
-    >
-      Programi priprema
+  <div
+    class="popup px-5 fixed-bottom bg-info pb-3"
+    @click="useToggle().togglePripreme()"
+  >
+    <div class="bg-white rounded-5 mx-2 my-5 pb-2">
+      <div
+        class="card-header d-flex justify-content-center display-5 m-2 rounded-4 parallelFont fs-1 pt-5"
+      >
+        Programi priprema
+      </div>
+      <ul
+        class="list-group list-group-flush p-3 rounded-5 shadow m-1 mx-1 my-5"
+      >
+        <li
+          class="list-group-item h4 d-flex justify-content-between parallelFont"
+          v-for="program in programiPriprema"
+          :class="{ activated: program.isActive }"
+          @click="editTest(program)"
+        >
+          <div>
+            <span class="w-100">{{ program.ime }} </span
+            ><span class="text-muted d-flex justify-content-start">{{
+              program.brojSati
+            }}</span>
+          </div>
+          <span
+            class="fs-5 d-flex justify-content-end align-items-end overflow-visible word-wrap"
+            >{{ program.cijena }} EUR
+            <!-- ({{
+                (Math.round(program.cijena * 7.5345 * 100) / 100).toFixed(2)
+              }}
+              kn)--></span
+          >
+        </li>
+        <div
+          class="card-header d-flex justify-content-center align-items-center text-center display-5 my-2 rounded-4 parallelFont fs-1 py-4 bg-light"
+        >
+          Ubrzani programi priprema
+        </div>
+        <li
+          class="list-group-item h4 d-flex justify-content-between parallelFont"
+          v-for="program in ubrzaniProgramiPriprema"
+          :class="{ activated: program.isActive }"
+          @click="editTest(program)"
+        >
+          <div>
+            <span class="w-100">{{ program.ime }} </span
+            ><span class="text-muted d-flex justify-content-start">{{
+              program.brojSati
+            }}</span>
+          </div>
+          <span
+            class="fs-5 d-flex justify-content-end align-items-end overflow-visible word-wrap"
+            >{{ program.cijena }} EUR
+            <!-- ({{
+                (Math.round(program.cijena * 7.5345 * 100) / 100).toFixed(2)
+              }}
+              kn)--></span
+          >
+        </li>
+        <div
+          class="h3 d-flex justify-content-evenly text-center fw-bold fixed-bottom price py-3 mb-4 mx-4 rounded-3"
+        >
+          <a
+            class="fs-8 text-decoration-none fw-bold text-dark"
+            href="tel:+385992053344"
+          >
+            {{ iznos }} EUR ({{
+              (Math.round(iznos * 7.5345 * 100) / 100).toFixed(2)
+            }}
+            kn)
+          </a>
+          <a
+            v-if="iznos != 0"
+            class="fs-8 text-decoration-none fw-bold text-dark"
+            href="tel:+385992053344"
+          >
+            <i class="fa fa-phone" style="font-size: 30px"></i
+          ></a>
+        </div>
+      </ul>
+      <p class="h6 mx-5 text-center">
+        Fiksni tečaj konverzije 1 EUR = 7,53450 kn.
+      </p>
+      <p class="fs-7 mx-5 text-center">
+        Izvedbeni program priprema za državnu maturu je osmišljen u skladu sa
+        službenim ispitnim katalozima koje izdaje Nacionalni centar za vanjsko
+        vrednovanje obrazovanja.
+      </p>
     </div>
-    <ul class="list-group list-group-flush p-3 rounded-5 shadow m-1 mx-1 my-5">
-      <li
-        class="list-group-item h4 d-flex justify-content-between parallelFont"
-        v-for="program in programiPriprema"
-        :class="{ activated: program.isActive }"
-        @click="editTest(program)"
-      >
-        <div>
-          <span class="w-100">{{ program.ime }} </span
-          ><span class="text-muted d-flex justify-content-start">{{
-            program.brojSati
-          }}</span>
-        </div>
-        <span
-          class="fs-5 d-flex justify-content-end align-items-end overflow-visible word-wrap"
-          >{{ program.cijena }} EUR
-          <!-- ({{
-                (Math.round(program.cijena * 7.5345 * 100) / 100).toFixed(2)
-              }}
-              kn)--></span
-        >
-      </li>
-      <div
-        class="card-header d-flex justify-content-center align-items-center text-center display-5 my-2 rounded-4 parallelFont fs-1 py-4 bg-light"
-      >
-        Ubrzani programi priprema
-      </div>
-      <li
-        class="list-group-item h4 d-flex justify-content-between parallelFont"
-        v-for="program in ubrzaniProgramiPriprema"
-        :class="{ activated: program.isActive }"
-        @click="editTest(program)"
-      >
-        <div>
-          <span class="w-100">{{ program.ime }} </span
-          ><span class="text-muted d-flex justify-content-start">{{
-            program.brojSati
-          }}</span>
-        </div>
-        <span
-          class="fs-5 d-flex justify-content-end align-items-end overflow-visible word-wrap"
-          >{{ program.cijena }} EUR
-          <!-- ({{
-                (Math.round(program.cijena * 7.5345 * 100) / 100).toFixed(2)
-              }}
-              kn)--></span
-        >
-      </li>
-      <div
-        class="h3 d-flex justify-content-evenly text-center fw-bold fixed-bottom price py-3 mb-4 mx-4 rounded-3"
-      >
-        <a
-          class="fs-8 text-decoration-none fw-bold text-dark"
-          href="tel:+385992053344"
-        >
-          {{ iznos }} EUR ({{
-            (Math.round(iznos * 7.5345 * 100) / 100).toFixed(2)
-          }}
-          kn)
-        </a>
-        <a
-          v-if="iznos != 0"
-          class="fs-8 text-decoration-none fw-bold text-dark"
-          href="tel:+385992053344"
-        >
-          <i class="fa fa-phone" style="font-size: 30px"></i
-        ></a>
-      </div>
-    </ul>
-    <p class="h6 mx-5 text-center">
-      Fiksni tečaj konverzije 1 EUR = 7,53450 kn.
-    </p>
-    <p class="fs-7 mx-5 text-center">
-      Izvedbeni program priprema za državnu maturu je osmišljen u skladu sa
-      službenim ispitnim katalozima koje izdaje Nacionalni centar za vanjsko
-      vrednovanje obrazovanja.
-    </p>
   </div>
 </template>
 
 <script>
-import { useToast } from "vue-toastification";
-const toast = useToast();
+// import { useToast } from "vue-toastification";
+// const toast = useToast();
 
-setTimeout(() => {
-  toast(
-    "Upisi na pripreme za državnu maturu traju od 1. veljače 2023. do 15. ožujka 2023. Upiši se i rezerviraj svoje mjesto.",
-    {
-      timeout: 15000,
-    }
-  );
-}, 100);
+// setTimeout(() => {
+//   toast(
+//     "Upisi na pripreme za državnu maturu traju od 1. veljače 2023. do 15. ožujka 2023. Upiši se i rezerviraj svoje mjesto.",
+//     {
+//       timeout: 15000,
+//     }
+//   );
+// }, 100);
 
-setTimeout(() => {
-  toast(
-    "Ukoliko upišete pripreme iz dva predmeta odobravamo 10% popusta. Ukoliko upišete pripreme iz tri ili više predmeta odobravamo 20% popusta.",
-    {
-      timeout: 15000,
-    }
-  );
-}, 15000);
+// setTimeout(() => {
+//   toast(
+//     "Ukoliko upišete pripreme iz dva predmeta odobravamo 10% popusta. Ukoliko upišete pripreme iz tri ili više predmeta odobravamo 20% popusta.",
+//     {
+//       timeout: 15000,
+//     }
+//   );
+// }, 15000);
 
-setTimeout(() => {
-  toast("Moguće je obročno plaćanje. ", {
-    timeout: 15000,
-  });
-}, 30000);
+// setTimeout(() => {
+//   toast("Moguće je obročno plaćanje. ", {
+//     timeout: 15000,
+//   });
+// }, 30000);
 
 export default {
   data() {
@@ -204,7 +208,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.popup {
+  border-radius: 12px 12px 0 0;
+  overflow: scroll;
+  height: 99vh;
+  z-index: 1032;
+}
+
 .word-wrap {
   white-space: nowrap;
 }
