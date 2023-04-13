@@ -12,7 +12,7 @@
         <div class="d-flex justify-content-around d-inline-block">
           <a
             class="fs-8 text-decoration-none fw-bold text-dark"
-            href="mailto: rudolf.rukavina@hexis.hr?subject=Subject%20Text&body=Body%20Text"
+            href="mailto:rudolf.rukavina@hexis.hr?subject=Pripreme%20za%20državnu%20maturu&body=Poštovani%2C%0D%0A%0D%0ANadam%20se%20da%20ste%20dobro.%20Javljam%20Vam%20se%20kako%20bih%20provjerio%2Fla%20dostupnost%20%20trenutno%20izabrane%20pripreme%20.%20Zanima%20me%20kupnja%20usluge%20u%20periodu%20od%20%20time%20frame%20.%20%0D%0A%0D%0AMolim%20Vas%2C%20možete%20li%20mi%20javiti%20je%20li%20usluga%20dostupna%20u%20tom%20razdoblju%3F%0D%0A%0D%0AUnaprijed%20zahvaljujem%20na%20Vašem%20vremenu%20i%20pomoći.%20Veselim%20se%20Vašem%20odgovoru.%0D%0A%0D%0ASrdačan%20pozdrav%2C%0D%0A%20ime%20klijenta%20"
           >
             <i
               class="fa fa-envelope mx-auto px-5 my-3"
@@ -31,10 +31,11 @@
           <p>
             <a
               class="fs-8 text-decoration-none fw-bold text-dark"
-              href="mailto: rudolf.rukavina@hexis.hr?subject=Subject%20Text&body=Body%20Text"
+              href="mailto:rudolf.rukavina@hexis.hr?subject=Pripreme%20za%20državnu%20maturu&body=Poštovani%2C%0D%0A%0D%0ANadam%20se%20da%20ste%20dobro.%20Javljam%20Vam%20se%20kako%20bih%20provjerio%2Fla%20dostupnost%20%20trenutno%20izabrane%20pripreme%20.%20Zanima%20me%20kupnja%20usluge%20u%20periodu%20od%20%20time%20frame%20.%20%0D%0A%0D%0AMolim%20Vas%2C%20možete%20li%20mi%20javiti%20je%20li%20usluga%20dostupna%20u%20tom%20razdoblju%3F%0D%0A%0D%0AUnaprijed%20zahvaljujem%20na%20Vašem%20vremenu%20i%20pomoći.%20Veselim%20se%20Vašem%20odgovoru.%0D%0A%0D%0ASrdačan%20pozdrav%2C%0D%0A%20ime%20klijenta%20"
               >rudolf.rukavina@hexis.hr</a
             >
           </p>
+
           <p>
             <a
               class="fs-8 text-decoration-none fw-bold text-dark"
