@@ -4,7 +4,7 @@
       <slot> Mi smo <span class="parallelFont">Parallel</span>. </slot>
     </InfoONama>
 
-    <Cards />
+    <!-- <Cards /> -->
     <InfoProgrami :data="useDataStore().programi" />
 
     <InfoONamaOpen v-if="useToggle().onamaOpen" :data="useDataStore().onama">
