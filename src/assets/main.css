@@ -17,7 +17,7 @@ body {
 }
 
 .parallelFont {
-  font-family: Chalkduster;
+    font-family: Chalkduster !important;
   font-size: larger;
 }
 
