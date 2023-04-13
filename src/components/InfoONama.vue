@@ -7,10 +7,12 @@
       <!-- O nama -->
       {{ data.title }}
     </p>
+    <div class="asd">
     <p class="mx-3 my-1 text">
       <slot></slot>
       {{ data.text }}
     </p>
+  </div>
   </div>
 </template>
 
@@ -20,6 +22,15 @@ const props = defineProps(["data"]);
 </script>
 
 <style scoped>
+.asd {
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-inline-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
 .info {
   position: relative;
   display: inline-block;
@@ -29,13 +40,6 @@ const props = defineProps(["data"]);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border: 1px solid rgba(156, 252, 248, 1) 11.2%, rgba(110, 123, 251, 1) 91.1%;
-  position: relative;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-inline-box;
-  -webkit-line-clamp: 2; /* number of lines to show */
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
 }
 .info:hover {
   color: rgb(0, 10, 148);
@@ -57,6 +61,5 @@ const props = defineProps(["data"]);
   font-weight: 500;
   font-size: 17px;
   border-radius: 5px;
-  padding-bottom: 26px;
 }
 </style>
