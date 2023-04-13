@@ -48,7 +48,7 @@ const props = defineProps(["data"]);
   font-weight: 500;
   font-size: 17px;
   position: relative;
-  overflow: hidden;
+  visibility: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2; /* number of lines to show */

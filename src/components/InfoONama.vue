@@ -49,7 +49,7 @@ const props = defineProps(["data"]);
   font-weight: 500;
   font-size: 17px;
   position: relative;
-  overflow: hidden;
+  visibility: hidden;
   border-radius: 5px;
   text-overflow: ellipsis;
   display: -webkit-box;
