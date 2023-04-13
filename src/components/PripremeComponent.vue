@@ -3,8 +3,13 @@
     Klepac je pussy
   </p>
   <div class="bg-white rounded-5 mx-2 my-5 pb-2">
+    <div
+        class="card-header d-flex justify-content-center display-5 m-2 rounded-4 parallelFont fs-1 pt-5"
+      >
+        Programi priprema
+      </div>
     <ul
-      class="list-group list-group-flush p-3 rounded-5 shadow m-1 bg-white mx-1 my-5"
+      class="list-group list-group-flush p-3 rounded-5 shadow m-1 mx-1 my-5"
     >
       <li
         class="list-group-item h4 d-flex justify-content-between"
@@ -28,7 +33,7 @@
         >
       </li>
       <div
-        class="card-header d-flex justify-content-center display-5 m-2 rounded-4"
+        class="card-header d-flex justify-content-center align-items-center display-5 my-2 rounded-4 parallelFont fs-1 py-4 bg-light"
       >
         Ubrzani programi priprema
       </div>
@@ -53,7 +58,7 @@
               kn)--></span
         >
       </li>
-      <div class="h3 d-flex justify-content-center text-center fw-bold">
+      <div class="h3 d-flex justify-content-center text-center fw-bold fixed-bottom price py-3 mx-4 rounded-3">
         Iznos: {{ iznos }} EUR ({{
           (Math.round(iznos * 7.5345 * 100) / 100).toFixed(2)
         }}
@@ -170,12 +175,16 @@ export default {
   min-width: 1050px;
 }
 
+.price {
+  background-color: rgba(154, 247, 255, 0.95);
+}
+
 .list-group-item:hover {
   border-radius: 10px;
   font-style: italic;
   cursor: pointer;
   margin-inline: 4px;
-  background-color: rgb(241, 241, 241);
+  background-color: rgba(0, 234, 255, 0.31);
 }
 
 .list-group-item {
@@ -183,7 +192,7 @@ export default {
   font-style: italic;
   cursor: pointer;
   margin-inline: 2px;
-  background-color: rgb(247, 247, 247);
+  background-color: rgba(0, 234, 255, 0.21);
 }
 
 .boxed {
