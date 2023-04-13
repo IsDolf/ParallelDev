@@ -1,98 +1,95 @@
 <template>
-  <div class="popup px-5 fixed-bottom bg-info pb-3">
-    <div class="d-flex justify-content-end my-3 mx-3">
+  <div
+    class="bg-white rounded-5 mx-1 my-1 my-5 position-absolute pripreme-wrapper"
+  >
+    <div
+      class="card-header d-flex justify-content-between mx-4 display-5 my-2 rounded-4 parallelFont fs-1"
+    >
+      <p></p>
+      Programi priprema
       <i
         @click="togglePripreme()"
-        class="fa fa-close d-inline-block"
+        class="fa fa-close fs-1 d-inline-block"
         aria-hidden="true"
       ></i>
     </div>
-    <div class="bg-white rounded-5 mx-2 my-5 pb-2">
+    <ul class="list-group list-group-flush p-3 rounded-5 shadow m-1 mx-1 my-1">
+      <li
+        class="list-group-item h4 d-flex justify-content-between parallelFont"
+        v-for="program in programiPriprema"
+        :class="{ activated: program.isActive }"
+        @click="editTest(program)"
+      >
+        <div>
+          <span class="w-100">{{ program.ime }} </span
+          ><span class="text-muted d-flex justify-content-start">{{
+            program.brojSati
+          }}</span>
+        </div>
+        <span
+          class="fs-5 d-flex justify-content-end align-items-end overflow-visible word-wrap"
+          >{{ program.cijena }} EUR
+          <!-- ({{
+                (Math.round(program.cijena * 7.5345 * 100) / 100).toFixed(2)
+              }}
+              kn)--></span
+        >
+      </li>
       <div
-        class="card-header d-flex justify-content-center display-5 m-2 rounded-4 parallelFont fs-1 pt-5"
+        class="card-header d-flex justify-content-center align-items-center text-center display-5 my-2 rounded-4 parallelFont fs-1 py-4 bg-light"
       >
-        Programi priprema
+        Ubrzani programi priprema
       </div>
-      <ul
-        class="list-group list-group-flush p-3 rounded-5 shadow m-1 mx-1 my-5"
+      <li
+        class="list-group-item h4 d-flex justify-content-between parallelFont"
+        v-for="program in ubrzaniProgramiPriprema"
+        :class="{ activated: program.isActive }"
+        @click="editTest(program)"
       >
-        <li
-          class="list-group-item h4 d-flex justify-content-between parallelFont"
-          v-for="program in programiPriprema"
-          :class="{ activated: program.isActive }"
-          @click="editTest(program)"
-        >
-          <div>
-            <span class="w-100">{{ program.ime }} </span
-            ><span class="text-muted d-flex justify-content-start">{{
-              program.brojSati
-            }}</span>
-          </div>
-          <span
-            class="fs-5 d-flex justify-content-end align-items-end overflow-visible word-wrap"
-            >{{ program.cijena }} EUR
-            <!-- ({{
+        <div>
+          <span class="w-100">{{ program.ime }} </span
+          ><span class="text-muted d-flex justify-content-start">{{
+            program.brojSati
+          }}</span>
+        </div>
+        <span
+          class="fs-5 d-flex justify-content-end align-items-end overflow-visible word-wrap"
+          >{{ program.cijena }} EUR
+          <!-- ({{
                 (Math.round(program.cijena * 7.5345 * 100) / 100).toFixed(2)
               }}
               kn)--></span
-          >
-        </li>
-        <div
-          class="card-header d-flex justify-content-center align-items-center text-center display-5 my-2 rounded-4 parallelFont fs-1 py-4 bg-light"
         >
-          Ubrzani programi priprema
-        </div>
-        <li
-          class="list-group-item h4 d-flex justify-content-between parallelFont"
-          v-for="program in ubrzaniProgramiPriprema"
-          :class="{ activated: program.isActive }"
-          @click="editTest(program)"
+      </li>
+      <div
+        class="h3 d-flex justify-content-evenly text-center fw-bold fixed-bottom price py-3 mb-4 mx-4 rounded-3"
+      >
+        <a
+          class="fs-8 text-decoration-none fw-bold text-dark"
+          href="tel:+385992053344"
         >
-          <div>
-            <span class="w-100">{{ program.ime }} </span
-            ><span class="text-muted d-flex justify-content-start">{{
-              program.brojSati
-            }}</span>
-          </div>
-          <span
-            class="fs-5 d-flex justify-content-end align-items-end overflow-visible word-wrap"
-            >{{ program.cijena }} EUR
-            <!-- ({{
-                (Math.round(program.cijena * 7.5345 * 100) / 100).toFixed(2)
-              }}
-              kn)--></span
-          >
-        </li>
-        <div
-          class="h3 d-flex justify-content-evenly text-center fw-bold fixed-bottom price py-3 mb-4 mx-4 rounded-3"
+          {{ iznos }} EUR ({{
+            (Math.round(iznos * 7.5345 * 100) / 100).toFixed(2)
+          }}
+          kn)
+        </a>
+        <a
+          v-if="iznos != 0"
+          class="fs-8 text-decoration-none fw-bold text-dark"
+          href="tel:+385992053344"
         >
-          <a
-            class="fs-8 text-decoration-none fw-bold text-dark"
-            href="tel:+385992053344"
-          >
-            {{ iznos }} EUR ({{
-              (Math.round(iznos * 7.5345 * 100) / 100).toFixed(2)
-            }}
-            kn)
-          </a>
-          <a
-            v-if="iznos != 0"
-            class="fs-8 text-decoration-none fw-bold text-dark"
-            href="tel:+385992053344"
-          >
-            <i class="fa fa-phone" style="font-size: 30px"></i
-          ></a>
-        </div>
-      </ul>
-      <p class="h6 mx-5 text-center">
-        Fiksni tečaj konverzije 1 EUR = 7,53450 kn.
-      </p>
-      <p class="fs-7 mx-5 text-center">
-        Izvedbeni program priprema za državnu maturu je osmišljen u skladu sa
-        službenim ispitnim katalozima koje izdaje Nacionalni centar za vanjsko
-        vrednovanje obrazovanja.
-      </p>
-    </div>
+          <i class="fa fa-phone" style="font-size: 30px"></i
+        ></a>
+      </div>
+    </ul>
+    <p class="h6 mx-5 text-center">
+      Fiksni tečaj konverzije 1 EUR = 7,53450 kn.
+    </p>
+    <p class="fs-7 mx-5 text-center">
+      Izvedbeni program priprema za državnu maturu je osmišljen u skladu sa
+      službenim ispitnim katalozima koje izdaje Nacionalni centar za vanjsko
+      vrednovanje obrazovanja.
+    </p>
   </div>
 </template>
 
@@ -272,5 +269,14 @@ export default {
 
 .hoverbutton:hover {
   background-color: lightgreen;
+}
+
+.pripreme-wrapper {
+  top: 5vh;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border: 1px solid rgba(156, 252, 248, 1) 11.2%, rgba(110, 123, 251, 1) 91.1%;
+  z-index: 1034;
+  height: 150%;
 }
 </style>
