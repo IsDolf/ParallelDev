@@ -85,11 +85,11 @@
     <p class="h6 mx-5 text-center">
       Fiksni tečaj konverzije 1 EUR = 7,53450 kn.
     </p>
-    <p class="fs-7 mx-5 text-center">
+    <!-- <p class="fs-7 mx-5 text-center">
       Izvedbeni program priprema za državnu maturu je osmišljen u skladu sa
       službenim ispitnim katalozima koje izdaje Nacionalni centar za vanjsko
       vrednovanje obrazovanja.
-    </p>
+    </p> -->
   </div>
 </template>
 
