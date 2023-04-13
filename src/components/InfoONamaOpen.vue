@@ -1,24 +1,22 @@
 <template>
   <div
-    class="wrapper fixed-bottom"
+    class="popup px-4 fixed-bottom bg-white pb-3"
     @click="useToggle().toggleOnama()"
   >
-    <div class="popup px-4 fixed-bottom bg-white pb-3">
-      <div class="pt-4">
-        <p class="title m-0 p-0 fs-1">{{ data.title }}</p>
-      </div>
-      <div class="mt-4 free-days fs-5">
-        <p><slot></slot> {{ data.list }}</p>
-        <p v-for="section in data.sections">
-          {{ section }}
-        </p>
-      </div>
+    <div class="pt-4">
+      <p class="title m-0 p-0 fs-1">{{ data.title }}</p>
+    </div>
+    <div class="mt-4 free-days fs-5">
+      <p><slot></slot> {{ data.list }}</p>
+      <p v-for="section in data.sections">
+        {{ section }}
+      </p>
     </div>
   </div>
 </template>
 
 <script setup>
-import { useToggle } from '../stores/toggle';
+import { useToggle } from "../stores/toggle";
 const props = defineProps(["data"]);
 </script>
 
@@ -39,15 +37,10 @@ const props = defineProps(["data"]);
   );
 }
 
-.wrapper {
-  height: 100vh;
-  background-color: transparent;
-  z-index: 1032;
-}
-
 .popup {
   border-radius: 12px 12px 0 0;
   overflow: scroll;
   height: 80vh;
+  z-index: 1032;
 }
 </style>
