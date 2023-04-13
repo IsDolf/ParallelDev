@@ -1,7 +1,7 @@
 <template>
   <div class="popup px-4 fixed-bottom pb-3">
-    <div class="pt-4">
-      <p class="title m-0 p-0 fs-1 d-inline-block">{{ data.title }}</p><i @click="useToggle().toggleOnama()" class="fa fa-close fs-1 d-inline-block" aria-hidden="true"></i>
+    <div class="pt-4 d-flex justify-content-between">
+      <p class="title m-0 p-0 fs-1 d-inline-block">{{ data.title }}</p><i @click="useToggle().toggleOnama()" class="fa fa-close  fs-1 d-inline-block" aria-hidden="true"></i>
     </div>
     <div class="mt-4 free-days fs-5">
       <p><slot></slot> {{ data.list }}</p>
@@ -21,7 +21,6 @@ const props = defineProps(["data"]);
 
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
 .title {
-  width: 90vw;
   font-weight: 600;
   font-size: 18px;
   font-family: Chalkduster !important;
