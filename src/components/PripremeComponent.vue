@@ -4,13 +4,11 @@
   </p>
   <div class="bg-white rounded-5 mx-2 my-5 pb-2">
     <div
-        class="card-header d-flex justify-content-center display-5 m-2 rounded-4 parallelFont fs-1 pt-5"
-      >
-        Programi priprema
-      </div>
-    <ul
-      class="list-group list-group-flush p-3 rounded-5 shadow m-1 mx-1 my-5"
+      class="card-header d-flex justify-content-center display-5 m-2 rounded-4 parallelFont fs-1 pt-5"
     >
+      Programi priprema
+    </div>
+    <ul class="list-group list-group-flush p-3 rounded-5 shadow m-1 mx-1 my-5">
       <li
         class="list-group-item h4 d-flex justify-content-between parallelFont"
         v-for="program in programiPriprema"
@@ -58,7 +56,9 @@
               kn)--></span
         >
       </li>
-      <div class="h3 d-flex justify-content-center text-center fw-bold fixed-bottom price py-3 mx-4 rounded-3">
+      <div
+        class="h3 d-flex justify-content-center text-center fw-bold fixed-bottom price py-3 mx-4 rounded-3"
+      >
         Iznos: {{ iznos }} EUR ({{
           (Math.round(iznos * 7.5345 * 100) / 100).toFixed(2)
         }}
