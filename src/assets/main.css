@@ -18,7 +18,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: Chalkduster;
+  src: url("../assets/Chalkduster.ttf");
+}
+
 .parallelFont {
-  font-family: "Rubik Maze", cursive;
+    font-family: Chalkduster;
   font-size: larger;
 }

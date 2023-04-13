@@ -41,7 +41,7 @@ const props = defineProps(["data"]);
   width: 100vw;
   font-weight: 600;
   font-size: 18px;
-  font-family: "Rubik Maze", cursive;
+  font-family: Chalkduster;
   white-space: nowrap;
 }
 
@@ -64,7 +64,7 @@ const props = defineProps(["data"]);
   line-height: 26px;
   color: rgb(0, 7, 101);
   width: 80vw;
-  font-family: "Rubik Maze", cursive;
+  font-family: Chalkduster;
 }
 
 .scroll-wrapper {
@@ -118,7 +118,7 @@ const props = defineProps(["data"]);
   line-height: 25px;
   letter-spacing: -0.2px;
   color: rgb(9, 53, 0);
-  font-family: "Rubik Maze", cursive;
+  font-family: Chalkduster;
   font-weight: 900;
 }
 

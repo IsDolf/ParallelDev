@@ -15,7 +15,7 @@ import { RouterLink, RouterView } from "vue-router";
 
 <style scoped>
 nav {
-  font-family: "Rubik Maze", cursive;
+  font-family: Chalkduster;
   border-radius: 0 0 3000em 3000em / 0 0 100em 100em;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
