@@ -1,9 +1,7 @@
 <template>
-  <div
-    class="bg-white rounded-5 mx-1 my-1 my-5 position-absolute pripreme-wrapper"
-  >
+  <div class="bg-white rounded-5 mx-1 my-1 my-5 pripreme-wrapper">
     <div
-      class="card-header d-flex justify-content-between mx-4 display-5 my-2 rounded-4 parallelFont fs-1"
+      class="card-header d-flex justify-content-between mx-4 display-5 my-2 py-3 rounded-4 parallelFont fs-1"
     >
       <p></p>
       Programi priprema
@@ -36,6 +34,26 @@
         >
       </li>
       <div
+        class="h3 d-flex justify-content-evenly text-center fw-bold price my-2 mx-4 py-3 rounded-3"
+      >
+        <a
+          class="fs-8 text-decoration-none fw-bold text-dark"
+          href="tel:+385992053344"
+        >
+          {{ iznos }} EUR ({{
+            (Math.round(iznos * 7.5345 * 100) / 100).toFixed(2)
+          }}
+          kn)
+        </a>
+        <a
+          v-if="iznos != 0"
+          class="fs-8 text-decoration-none fw-bold text-dark"
+          href="tel:+385992053344"
+        >
+          <i class="fa fa-phone" style="font-size: 30px"></i
+        ></a>
+      </div>
+      <div
         class="card-header d-flex justify-content-center align-items-center text-center display-5 my-2 rounded-4 parallelFont fs-1 py-4 bg-light"
       >
         Ubrzani programi priprema
@@ -61,26 +79,6 @@
               kn)--></span
         >
       </li>
-      <div
-        class="h3 d-flex justify-content-evenly text-center fw-bold fixed-bottom price py-3 mb-4 mx-4 rounded-3"
-      >
-        <a
-          class="fs-8 text-decoration-none fw-bold text-dark"
-          href="tel:+385992053344"
-        >
-          {{ iznos }} EUR ({{
-            (Math.round(iznos * 7.5345 * 100) / 100).toFixed(2)
-          }}
-          kn)
-        </a>
-        <a
-          v-if="iznos != 0"
-          class="fs-8 text-decoration-none fw-bold text-dark"
-          href="tel:+385992053344"
-        >
-          <i class="fa fa-phone" style="font-size: 30px"></i
-        ></a>
-      </div>
     </ul>
     <!-- <p class="h6 mx-5 text-center">
       Fiksni tečaj konverzije 1 EUR = 7,53450 kn.
@@ -216,7 +214,7 @@ export default {
 <style scoped>
 .fa-close {
   cursor: pointer;
-  font-size: 40px;
+  font-size: 60px;
 }
 .popup {
   border-radius: 12px 12px 0 0;
@@ -277,7 +275,5 @@ export default {
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border: 1px solid rgba(156, 252, 248, 1) 11.2%, rgba(110, 123, 251, 1) 91.1%;
   z-index: 1034;
-  height: 200%;
-  width: auto;
 }
 </style>

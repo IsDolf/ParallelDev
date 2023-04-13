@@ -1,24 +1,30 @@
 <template>
   <main>
-    <InfoONama :data="useDataStore().onama">
+    <InfoONama v-if="!useToggle().pripremeOpen" :data="useDataStore().onama">
       <slot> Mi smo <span class="parallelFont">Parallel</span>. </slot>
     </InfoONama>
 
-    <Cards />
+    <Cards v-if="!useToggle().pripremeOpen" />
 
-    <InfoProgrami :data="useDataStore().programi" />
+    <InfoProgrami
+      v-if="!useToggle().pripremeOpen"
+      :data="useDataStore().programi"
+    />
 
-    <InfoPitanja />
+    <InfoPitanja v-if="!useToggle().pripremeOpen" />
 
     <Transition name="slide-fade">
-      <InfoONamaOpen v-if="useToggle().onamaOpen" :data="useDataStore().onama">
+      <InfoONamaOpen
+        v-if="useToggle().onamaOpen && !useToggle().pripremeOpen"
+        :data="useDataStore().onama"
+      >
         <slot> Mi smo <span class="parallelFont">Parallel</span>. </slot>
       </InfoONamaOpen>
     </Transition>
 
     <Transition name="slide-fade">
       <InfoProgramiOpen
-        v-if="useToggle().programiOpen"
+        v-if="useToggle().programiOpen && !useToggle().pripremeOpen"
         :data="useDataStore().programi"
       />
     </Transition>
@@ -26,7 +32,7 @@
       <PripremeComponent v-if="useToggle().pripremeOpen" />
     </Transition>
 
-    <FooterComponent />
+    <FooterComponent v-if="!useToggle().pripremeOpen" />
   </main>
 </template>
 
