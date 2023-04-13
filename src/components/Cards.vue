@@ -120,7 +120,7 @@ window.setInterval(() => {
   line-height: 26px;
   color: rgb(0, 7, 101);
   width: 80vw;
-  font-family: Chalkduster !important;
+  font-family: "Rubik Maze", cursive;
 }
 
 .scroll-wrapper {
@@ -176,7 +176,7 @@ window.setInterval(() => {
   line-height: 25px;
   letter-spacing: -0.2px;
   color: rgb(9, 53, 0);
-  font-family: Chalkduster !important;
+  font-family: "Rubik Maze", cursive;
   font-weight: 900;
 }
 

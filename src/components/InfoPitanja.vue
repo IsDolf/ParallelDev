@@ -98,7 +98,7 @@ const props = defineProps(["data"]);
   width: 90vw;
   font-weight: 600;
   font-size: 18px;
-  font-family: Chalkduster !important;
+  font-family: "Rubik Maze", cursive;
   white-space: nowrap;
 }
 .text {
