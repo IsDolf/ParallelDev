@@ -42,7 +42,7 @@ const props = defineProps(["data"]);
 .popup {
   border-radius: 12px 12px 0 0;
   overflow: scroll;
-  height: 99vh;
+  height: 85vh;
   z-index: 1032;
 }
 
