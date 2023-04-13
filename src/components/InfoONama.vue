@@ -45,11 +45,12 @@ const props = defineProps(["data"]);
 }
 .text {
   width: 90vw;
+  height: auto;
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
   position: relative;
-  visibility: hidden;
+  overflow: hidden;
   border-radius: 5px;
   text-overflow: ellipsis;
   display: -webkit-box;

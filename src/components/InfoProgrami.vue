@@ -44,11 +44,12 @@ const props = defineProps(["data"]);
 }
 .text {
   width: 90vw;
+  height: auto;
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
   position: relative;
-  visibility: hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2; /* number of lines to show */

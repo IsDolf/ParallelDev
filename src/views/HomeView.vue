@@ -5,7 +5,6 @@
     </InfoONama>
 
     <Cards />
-    asd
     <InfoProgrami :data="useDataStore().programi" />
 
     <InfoONamaOpen v-if="useToggle().onamaOpen" :data="useDataStore().onama">
