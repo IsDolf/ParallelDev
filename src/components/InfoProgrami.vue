@@ -46,7 +46,7 @@ const props = defineProps(["data"]);
 .title {
   width: 90vw;
   font-weight: 600;
-  font-size: 26px;
+  font-size: 22px;
   font-family:   var(--font);
   white-space: nowrap;
 }
