@@ -1,7 +1,7 @@
 <template>
   <main>
     <InfoONama v-if="!useToggle().pripremeOpen" :data="useDataStore().onama">
-      <slot> Mi smo <span class="parallelFont">Parallel</span>. </slot>
+      <slot> Mi smo Parallel.</slot>
     </InfoONama>
 
     <Cards v-if="!useToggle().pripremeOpen" />
@@ -18,7 +18,7 @@
         v-if="useToggle().onamaOpen && !useToggle().pripremeOpen"
         :data="useDataStore().onama"
       >
-        <slot> Mi smo <span class="parallelFont">Parallel</span>. </slot>
+        <slot> Mi smo Parallel.</slot>
       </InfoONamaOpen>
     </Transition>
 

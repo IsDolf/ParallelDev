@@ -1,11 +1,16 @@
 <template>
   <div class="popup px-4 fixed-bottom pb-3">
     <div class="pt-4 d-flex justify-content-between">
-      <p class="title m-0 p-0 fs-1 d-inline-block">{{ data.title }}</p><i @click="useToggle().toggleOnama()" class="fa fa-close  fs-1 d-inline-block" aria-hidden="true"></i>
+      <p class="title m-0 p-0 fs-1 d-inline-block">{{ data.title }}</p>
+      <i
+        @click="useToggle().toggleOnama()"
+        class="fa fa-close fs-1 d-inline-block"
+        aria-hidden="true"
+      ></i>
     </div>
     <div class="mt-4 free-days fs-5">
-      <p><slot></slot> {{ data.list }}</p>
-      <p v-for="section in data.sections">
+      <p class="text"><slot></slot> {{ data.list }}</p>
+      <p class="text" v-for="section in data.sections">
         {{ section }}
       </p>
     </div>
@@ -18,12 +23,20 @@ const props = defineProps(["data"]);
 </script>
 
 <style scoped>
-
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+
+@font-face {
+  font-family: Pangolin;
+  src: url("../assets/Pangolin-Regular.ttf");
+}
+
+.text {
+  font-family: Pangolin;
+}
 .title {
   font-weight: 600;
   font-size: 18px;
-  font-family:   var(--font);
+  font-family: var(--font);
 }
 
 .popup {

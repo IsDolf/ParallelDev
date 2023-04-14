@@ -49,6 +49,10 @@ const props = defineProps(["data"]);
     rgba(0, 0, 0, 0.2) 0px -1.5px 0px inset;
 }
 
+@font-face {
+  font-family: Pangolin;
+  src: url("../assets/Pangolin-Regular.ttf");
+}
 
 .title {
   width: 90vw;
@@ -62,5 +66,6 @@ const props = defineProps(["data"]);
   font-weight: 500;
   font-size: 18px;
   border-radius: 5px;
+  font-family: Pangolin;
 }
 </style>
