@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white rounded-5 mx-1 my-1 my-5 pripreme-wrapper">
     <div
-      class="d-flex justify-content-between mx-4 display-5 my-2 py-3 rounded-4 parallelFont fs-1"
+      class="d-flex justify-content-between mx-4 display-5 my-2 py-3 rounded-4 pangolinFont fs-1"
     >
       <p></p>
       Programi priprema
@@ -13,7 +13,7 @@
     </div>
     <ul class="list-group list-group-flush p-3 rounded-5 shadow m-1 mx-1 my-1">
       <li
-        class="list-group-item h4 d-flex justify-content-between parallelFont"
+        class="list-group-item h4 d-flex justify-content-between pangolinFont"
         v-for="program in programiPriprema"
         :class="{ activated: program.isActive }"
         @click="editTest(program)"
@@ -50,12 +50,12 @@
         </button>
       </div>
       <div
-        class="card-header d-flex justify-content-center align-items-center text-center display-5 my-2 shadow rounded-4 parallelFont fs-1 py-4"
+        class="card-header d-flex justify-content-center align-items-center text-center display-5 my-2 shadow rounded-4 pangolinFont fs-1 py-4"
       >
         Ubrzani programi priprema
       </div>
       <li
-        class="list-group-item h4 d-flex justify-content-between parallelFont"
+        class="list-group-item h4 d-flex justify-content-between pangolinFont"
         v-for="program in ubrzaniProgramiPriprema"
         :class="{ activated: program.isActive }"
         @click="editTest(program)"
@@ -208,6 +208,15 @@ export default {
 </script>
 
 <style scoped>
+
+@font-face {
+  font-family: Pangolin;
+  src: url("../assets/Pangolin-Regular.ttf");
+}
+
+.pangolinFont {
+  font-family: Pangolin;
+}
 .card-header {
   background-image: linear-gradient(
     90deg,
