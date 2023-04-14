@@ -33,7 +33,7 @@
         </InfoONamaOpen>
       </Transition>
 
-      <Transition name="slide-right">
+      <Transition name="slide-fade">
         <InfoProgramiOpen
           v-if="useToggle().programiOpen && !useToggle().pripremeOpen"
           :data="useDataStore().programi"
