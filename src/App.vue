@@ -7,7 +7,7 @@ import SplashComponent from "./components/SplashComponent.vue";
 <template>
   <Transition name="slide-fade">
     <nav class="navbar box-shadow" v-if="useToggle().splash">
-      <img class="m-auto mt-5" src="./assets/parallelLogoFinal.png" alt="" />
+      <img class="m-auto mt-2" src="./assets/parallelLogoFinal.png" alt="" />
       <SplashComponent> </SplashComponent>
       <div class="container-fluid d-flex justify-content-center">
         <a class="navbar-brand fw-bold fst-italic" href="#"
