@@ -18,10 +18,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 @font-face {
-  font-family: Podkova;
-  src: url("../assets/Podkova-ExtraBold.ttf");
-}
+    font-family: PermamentMarker;
+    src: url("./assets/PermanentMarker-Regular.ttf");
+  }
+
 
 .parallelFont {
   font-family: var(--font);
@@ -29,5 +31,5 @@ body {
 }
 
 :root {
-  --font: Podkova;
+  --font: PermamentMarker;
 }

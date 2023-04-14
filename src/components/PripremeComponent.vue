@@ -34,7 +34,7 @@
         >
       </li>
       <div
-        class="h3 d-flex justify-content-evenly text-center fw-bold shadow-lg my-2 mx-4 py-3 rounded-3" :class="iznos == 0 ? 'price' : 'activated', 'border border-success'" 
+        class="h3 d-flex justify-content-evenly text-center fw-bold shadow-lg my-2 mx-4 py-3 rounded-3" :class="iznos == 0 ? 'price' : 'activated'" 
       >
         {{ iznos }} EUR ({{
           (Math.round(iznos * 7.5345 * 100) / 100).toFixed(2)

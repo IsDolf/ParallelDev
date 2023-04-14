@@ -49,6 +49,7 @@ const props = defineProps(["data"]);
     rgba(0, 0, 0, 0.2) 0px -1.5px 0px inset;
 }
 
+
 .title {
   width: 90vw;
   font-weight: 600;
