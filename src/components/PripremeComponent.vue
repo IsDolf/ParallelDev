@@ -34,18 +34,66 @@
         >
       </li>
       <div
-        class="h3 d-flex justify-content-evenly text-center fw-bold shadow-lg my-2 mx-4 py-3 rounded-3" :class="iznos == 0 ? 'price' : 'activated'" 
+        class="h3 d-flex justify-content-evenly text-center fw-bold shadow-lg my-2 mx-4 py-3 rounded-3"
+        :class="iznos == 0 ? 'price' : 'activated'"
       >
-        {{ iznos }} EUR ({{
-          (Math.round(iznos * 7.5345 * 100) / 100).toFixed(2)
-        }}
-        kn)
+        <div>
+          <p v-if="activePrograms == 0">Niste odabrali niti jedan program</p>
+          <p v-if="activePrograms == 1">
+            Odabrali ste {{ activePrograms }} program
+          </p>
+          <p v-if="activePrograms > 1">
+            Odabrali ste {{ activePrograms }} programa
+          </p>
+          <p v-if="activePrograms == 1" class="small-price fst-italic mx-3">
+            Ukoliko upišete pripreme iz dva predmeta odobravamo 10% popusta.
+          </p>
+          <p v-if="activePrograms == 2" class="small-price fst-italic mx-3">
+            Ukoliko upišete pripreme iz tri ili više predmeta odobravamo 20%
+            popusta.
+          </p>
+          <p v-if="activePrograms == 1">
+            {{ iznos }} EUR ({{
+              (Math.round(iznos * 7.5345 * 100) / 100).toFixed(2)
+            }}
+            kn)
+          </p>
+          <p v-if="activePrograms == 2">
+            {{ iznos - iznos * 0.1 }} EUR ({{
+              (Math.round((iznos - iznos * 0.1) * 7.5345 * 100) / 100).toFixed(
+                2
+              )
+            }}
+            kn)
+          </p>
+          <p v-if="activePrograms > 2">
+            {{ iznos - iznos * 0.15 }} EUR ({{
+              (Math.round((iznos - iznos * 0.15) * 7.5345 * 100) / 100).toFixed(
+                2
+              )
+            }}
+            kn)
+          </p>
+
+          <p v-if="activePrograms == 2" class="small-price fst-italic mx-3">
+            Primjenjeno 10% popusta.
+          </p>
+          <p v-if="activePrograms > 2" class="small-price fst-italic mx-3">
+            Primjenjeno 15% popusta.
+          </p>
+        </div>
       </div>
       <div class="row d-flex justify-content-evenly">
-        <button class="d-flex justify-content-center btn col-5 d-inline-block" :class="iznos == 0 ? 'disabled' : ''" >
+        <button
+          class="d-flex justify-content-center btn col-5 d-inline-block"
+          :class="iznos == 0 ? 'disabled' : ''"
+        >
           <i class="fa fa-envelope text-center" style="font-size: 80px"></i>
         </button>
-        <button class="d-flex justify-content-center btn col-5 d-inline-block" :class="iznos == 0 ? 'disabled' : ''">
+        <button
+          class="d-flex justify-content-center btn col-5 d-inline-block"
+          :class="iznos == 0 ? 'disabled' : ''"
+        >
           <i class="fa fa-phone text-center" style="font-size: 80px"></i>
         </button>
       </div>
@@ -121,6 +169,7 @@ export default {
     return {
       activated: false,
       iznos: 0,
+      activePrograms: 0,
 
       programiPriprema: [
         {
@@ -193,9 +242,11 @@ export default {
       if (program.isActive) {
         program.isActive = false;
         this.iznos = this.iznos - program.cijena;
+        this.activePrograms = this.activePrograms - 1;
       } else {
         program.isActive = true;
         this.iznos = this.iznos + program.cijena;
+        this.activePrograms = this.activePrograms + 1;
       }
     },
     togglePripreme() {
@@ -208,7 +259,6 @@ export default {
 </script>
 
 <style scoped>
-
 @font-face {
   font-family: Pangolin;
   src: url("../assets/Pangolin-Regular.ttf");
@@ -287,5 +337,9 @@ export default {
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border: 1px solid rgba(156, 252, 248, 1) 11.2%, rgba(110, 123, 251, 1) 91.1%;
   z-index: 1034;
+}
+
+.small-price {
+  font-size: 11px;
 }
 </style>
