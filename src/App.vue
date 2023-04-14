@@ -5,7 +5,7 @@ import SplashComponent from "./components/SplashComponent.vue";
 
 setInterval(() => {
   useToggle().toggleSplash()
-}, 1000);
+}, 900);
 </script>
 
 <template>

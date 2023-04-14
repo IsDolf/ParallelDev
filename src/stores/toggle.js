@@ -36,16 +36,16 @@ export const useToggle = defineStore("toggle", {
       }, 1500);
       setInterval(() => {
         this.splash3 = true;
-      }, 2300);
+      }, 1800);
       setInterval(() => {
         this.splash4 = true;
-      }, 3100);
+      }, 2100);
       setInterval(() => {
         this.splash5 = true;
-      }, 3900);
+      }, 2400);
       setInterval(() => {
         this.splash6 = true;
-      }, 4700);
+      }, 2700);
     },
   }),
   actions: {},
