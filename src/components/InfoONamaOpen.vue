@@ -8,7 +8,7 @@
         aria-hidden="true"
       ></i>
     </div>
-    <div class="mt-4 free-days fs-5 test rounded-4">
+    <div class="mt-4 fs-5 text-scroll rounded-4">
       <p class="text"><slot></slot> {{ data.list }}</p>
       <p class="text" v-for="section in data.sections">
         {{ section }}
@@ -51,7 +51,7 @@ const props = defineProps(["data"]);
   cursor: pointer;
 }
 
-.test {
+.text-scroll {
   overflow: scroll;
   height: 85vh;
   padding-block-end: 150px;

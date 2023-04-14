@@ -8,7 +8,7 @@
         aria-hidden="true"
       ></i>
     </div>
-    <div class="mt-4 free-days fs-5">
+    <div class="mt-3 pt-3 text-scroll rounded-4 px-3 fs-5">
       <div
         class="card bg-info my-2 box-shadow d-flex justify-content-center text-center"
         v-for="item in data.list"
@@ -47,7 +47,6 @@ const props = defineProps(["data"]);
 
 .popup {
   border-radius: 12px 12px 0 0;
-  overflow: scroll;
   height: 85vh;
   z-index: 1032;
 }
@@ -152,5 +151,11 @@ const props = defineProps(["data"]);
     rgba(0, 255, 34, 0.763) 0.2%,
     rgba(53, 252, 79, 0.415) 99.1%
   );
+}
+
+.text-scroll {
+  overflow: scroll;
+  height: 85vh;
+  padding-block-end: 150px;
 }
 </style>
