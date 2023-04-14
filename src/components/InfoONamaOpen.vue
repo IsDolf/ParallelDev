@@ -8,7 +8,7 @@
         aria-hidden="true"
       ></i>
     </div>
-    <div class="mt-4 free-days fs-5 test">
+    <div class="mt-4 free-days fs-5 test rounded-4">
       <p class="text"><slot></slot> {{ data.list }}</p>
       <p class="text" v-for="section in data.sections">
         {{ section }}
