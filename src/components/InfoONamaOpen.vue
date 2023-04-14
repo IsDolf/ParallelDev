@@ -8,7 +8,7 @@
         aria-hidden="true"
       ></i>
     </div>
-    <div class="mt-4 free-days fs-5">
+    <div class="mt-4 free-days fs-5 test">
       <p class="text"><slot></slot> {{ data.list }}</p>
       <p class="text" v-for="section in data.sections">
         {{ section }}
@@ -41,7 +41,6 @@ const props = defineProps(["data"]);
 
 .popup {
   border-radius: 12px 12px 0 0;
-  overflow: scroll;
   height: 85vh;
   z-index: 1032;
   background: rgb(0, 255, 211);
@@ -50,5 +49,11 @@ const props = defineProps(["data"]);
 
 .fa-close {
   cursor: pointer;
+}
+
+.test {
+  overflow: scroll;
+  height: 85vh;
+  padding-block-end: 150px;
 }
 </style>
