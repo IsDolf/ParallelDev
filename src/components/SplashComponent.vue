@@ -3,13 +3,13 @@
     <div class="display-1 py-2 text-center pangolinFont">
       <p>Dobrodošli na službenu stranicu</p>
     </div>
-    <div class="d-flex justify-content-center">
+    <!-- <div class="d-flex justify-content-center">
       <div
         class="card mb-3 py-2 d-flex justify-content-center text-center px-5 pangolinFont fw-bold display-4"
       >
         Započnimo!
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
