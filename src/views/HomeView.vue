@@ -1,5 +1,10 @@
 <template>
   <main>
+<SplashComponent v-if="!splash">
+  
+</SplashComponent>
+    
+<div v-else>
     <InfoONama v-if="!useToggle().pripremeOpen" :data="useDataStore().onama">
       <slot> Mi smo Parallel.</slot>
     </InfoONama>
@@ -33,6 +38,7 @@
     </Transition>
 
     <FooterComponent v-if="!useToggle().pripremeOpen" />
+  </div>
   </main>
 </template>
 
@@ -47,6 +53,7 @@ import InfoProgrami from "../components/InfoProgrami.vue";
 import InfoPitanja from "../components/InfoPitanja.vue";
 import Cards from "../components/Cards.vue";
 import FooterComponent from "../components/FooterComponent.vue";
+import SplashComponent from "../components/SplashComponent.vue";
 </script>
 
 <style scoped>
