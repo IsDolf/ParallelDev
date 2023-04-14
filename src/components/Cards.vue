@@ -1,5 +1,5 @@
 <template>
-  <h2 class="title mx-4 pt-1 mb-0 pt-4 mt-3">Cijene po kategorijama:</h2>
+  <h2 class="title mx-4 pt-1 mb-0 pt-4 mt-3">Kategorije:</h2>
   <div class="inset-shadow bg-info rounded-5 mx-2 mb-4">
     <div class="scroll-wrapper mt-3 pt-3 pb-4 px-4">
       <div class="card-wrapper">
