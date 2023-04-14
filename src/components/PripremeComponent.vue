@@ -49,7 +49,7 @@
             Ukoliko upišete pripreme iz dva predmeta odobravamo 10% popusta.
           </p>
           <p v-if="activePrograms == 2" class="small-price fst-italic mx-3">
-            Ukoliko upišete pripreme iz tri ili više predmeta odobravamo 20%
+            Ukoliko upišete pripreme iz tri ili više predmeta odobravamo 15%
             popusta.
           </p>
           <p v-if="activePrograms == 1">
