@@ -53,14 +53,14 @@ const props = defineProps(["data"]);
 .title {
   width: 90vw;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 26px;
   font-family:   var(--font);
 }
 .text {
   width: 90vw;
   font-style: normal;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 18px;
   border-radius: 5px;
 }
 </style>
