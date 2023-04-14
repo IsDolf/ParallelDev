@@ -11,7 +11,7 @@ setInterval(() => {
 <template>
   <Transition name="slide-fade">
     <nav class="navbar box-shadow" v-if="useToggle().splash"  @click="useToggle().toggleSplash()">
-      <img class="m-auto mt-2" src="./assets/parallelLogoFinal.png" alt="" />
+      <img class="m-auto py-5 mt-2" src="./assets/parallelLogoFinal.png" alt="" />
       <SplashComponent> </SplashComponent>
       <div class="container-fluid d-flex justify-content-center">
         <a class="navbar-brand fw-bold fst-italic" href="#"
