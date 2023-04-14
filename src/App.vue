@@ -2,11 +2,15 @@
 import { RouterLink, RouterView } from "vue-router";
 import { useToggle } from "./stores/toggle";
 import SplashComponent from "./components/SplashComponent.vue";
+
+setInterval(() => {
+  useToggle().toggleSplash()
+}, 3000);
 </script>
 
 <template>
   <Transition name="slide-fade">
-    <nav class="navbar box-shadow" v-if="useToggle().splash">
+    <nav class="navbar box-shadow" v-if="useToggle().splash"  @click="useToggle().toggleSplash()">
       <img class="m-auto mt-2" src="./assets/parallelLogoFinal.png" alt="" />
       <SplashComponent> </SplashComponent>
       <div class="container-fluid d-flex justify-content-center">
@@ -25,7 +29,7 @@ import SplashComponent from "./components/SplashComponent.vue";
       </div>
     </nav>
   </Transition>
-  <RouterView v-if="useToggle().splash1" />
+  <RouterView v-if="useToggle().splash1"/>
 </template>
 
 <style scoped>

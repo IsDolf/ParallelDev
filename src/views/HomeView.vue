@@ -3,26 +3,50 @@
     <div>
       <Transition name="slide-right">
         <InfoONama
-          v-if="!useToggle().pripremeOpen && useToggle().splash2"
+          v-if="
+            !useToggle().pripremeOpen &&
+            useToggle().splash2 &&
+            !useToggle().onamaOpen &&
+            !useToggle().programiOpen
+          "
           :data="useDataStore().onama"
         >
           <slot> Mi smo Parallel.</slot>
         </InfoONama>
       </Transition>
 
-      <Transition name="slide-fade">
-        <div v-if="!useToggle().pripremeOpen && useToggle().splash3">
-        <Cards />
-      </div>
+      <Transition name="slide-left">
+        <div
+          v-if="
+            !useToggle().pripremeOpen &&
+            useToggle().splash3 &&
+            !useToggle().onamaOpen &&
+            !useToggle().programiOpen
+          "
+        >
+          <Cards />
+        </div>
       </Transition>
       <Transition name="slide-right">
         <InfoProgrami
-          v-if="!useToggle().pripremeOpen && useToggle().splash4"
+          v-if="
+            !useToggle().pripremeOpen &&
+            useToggle().splash4 &&
+            !useToggle().onamaOpen &&
+            !useToggle().programiOpen
+          "
           :data="useDataStore().programi"
         />
       </Transition>
       <Transition name="slide-right">
-        <InfoPitanja v-if="!useToggle().pripremeOpen && useToggle().splash5" />
+        <InfoPitanja
+          v-if="
+            !useToggle().pripremeOpen &&
+            useToggle().splash5 &&
+            !useToggle().onamaOpen &&
+            !useToggle().programiOpen
+          "
+        />
       </Transition>
       <Transition name="slide-fade">
         <InfoONamaOpen
@@ -43,9 +67,14 @@
         <PripremeComponent v-if="useToggle().pripremeOpen" />
       </Transition>
       <Transition name="slide-fade">
-      <FooterComponent
-        v-if="!useToggle().pripremeOpen && useToggle().splash6"
-      />
+        <FooterComponent
+          v-if="
+            !useToggle().pripremeOpen &&
+            useToggle().splash6 &&
+            !useToggle().onamaOpen &&
+            !useToggle().programiOpen
+          "
+        />
       </Transition>
     </div>
   </main>
@@ -91,6 +120,20 @@ import SplashComponent from "../components/SplashComponent.vue";
 .slide-right-enter-from,
 .slide-right-leave-to {
   transform: translateX(-100vw);
+  opacity: 0;
+}
+
+.slide-left-enter-active {
+  transition: all 0.6s;
+}
+
+.slide-left-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-left-enter-from,
+.slide-left-leave-to {
+  transform: translateX(100vw);
   opacity: 0;
 }
 </style>
